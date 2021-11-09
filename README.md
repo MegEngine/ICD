@@ -1,5 +1,5 @@
-# Instance-conditional Distillation for Object Detection
-This is a [MegEngine](https://github.com/MegEngine/MegEngine) implementation of the paper "Instance-conditional Distillation for Object Detection", based on [MegEngine Models](https://github.com/MegEngine/Models).
+# Instance-conditional Knowledge Distillation for Object Detection
+This is a [MegEngine](https://github.com/MegEngine/MegEngine) implementation of the paper "Instance-conditional Knowledge Distillation for Object Detection", based on [MegEngine Models](https://github.com/MegEngine/Models).
 
 The pytorch implementation based on detectron2 will be released soon.
 
