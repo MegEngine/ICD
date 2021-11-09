@@ -1,0 +1,38 @@
+*log*/
+*.jpg
+*.png
+_model_zoo/
+
+official/vision/detection/profile
+official/vision/detection/*.json
+
+# compilation and distribution
+__pycache__
+_ext
+*.pyc
+*.so
+build/
+dist/
+wheels/
+
+# pytorch/python/numpy formats
+*.pth
+*.pkl
+*.npy
+
+# ipython/jupyter notebooks
+*.ipynb
+**/.ipynb_checkpoints/
+
+# Editor temporaries
+*.swn
+*.swo
+*.swp
+*~
+
+# pycharm editor settings
+.idea
+
+# vscode editor settings
+.vscode
+
