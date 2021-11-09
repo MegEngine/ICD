@@ -1,0 +1,18 @@
+import megengine as mge
+import megengine.module as M
+from megengine import functional as F
+import numpy as np
+
+class MLP(M.Module):
+    """ Very simple multi-layer perceptron (also called FFN)"""
+
+    def __init__(self, input_dim, hidden_dim, output_dim, num_layers):
+        super().__init__()
+        self.num_layers = num_layers
+        h = [hidden_dim] * (num_layers - 1)
+        self.layers = [M.Linear(n, k) for n, k in zip([input_dim] + h, h + [output_dim])]
+
+    def forward(self, x):
+        for i, layer in enumerate(self.layers):
+            x = F.nn.relu(layer(x)) if i < self.num_layers - 1 else layer(x)
+        return x
