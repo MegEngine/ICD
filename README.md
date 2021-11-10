@@ -6,7 +6,7 @@ The pytorch implementation based on detectron2 will be released soon.
 > [**Instance-Conditional Knowledge Distillation for Object Detection**](https://arxiv.org/abs/2110.12724),            
 > Zijian Kang, Peizhen Zhang, Xiangyu Zhang, Jian Sun, Nanning Zheng         
 > In: Proc. Advances in Neural Information Processing Systems (NeurIPS), 2021            
-> [[arXiv](https://arxiv.org/abs/2106.14855)]
+> [[arXiv](https://arxiv.org/abs/2110.12724)]
 
 ## Requirements
 
