@@ -1,5 +1,5 @@
-# Instance-conditional Distillation for Object Detection
-This is an official implementation of the paper "Instance-conditional Distillation for Object Detection" in [Pytorch](https://pytorch.org), it supports various detectors from Detectron2 and AdelaiDet. 
+# Instance-Conditional Knowledge Distillation for Object Detection
+This is an official implementation of the paper "Instance-Conditional Knowledge Distillation for Object Detection" in [Pytorch](https://pytorch.org), it supports various detectors from Detectron2 and AdelaiDet. 
 
 
 # Requirements

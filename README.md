@@ -1,5 +1,5 @@
-# Instance-conditional Knowledge Distillation for Object Detection
-This is the official implementation of the paper "Instance-conditional Knowledge Distillation for Object Detection", based on [MegEngine](./megengine_release/README.md) and [Pytorch](./pytorch_release/README.md). Go to the desired subfolders for more information and guidance!
+# Instance-Conditional Knowledge Distillation for Object Detection
+This is the official implementation of the paper "Instance-Conditional Knowledge Distillation for Object Detection", based on [MegEngine](./megengine_release/README.md) and [Pytorch](./pytorch_release/README.md). Go to the desired subfolders for more information and guidance!
 
 
 <div align="center">
