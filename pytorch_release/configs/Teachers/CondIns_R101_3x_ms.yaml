@@ -1,0 +1,6 @@
+_BASE_: "../Base-CondInst.yaml"
+MODEL:
+  WEIGHTS: "https://cloudstor.aarnet.edu.au/plus/s/M8nNxSR5iNP4qyO/download"
+  RESNETS:
+    DEPTH: 101
+

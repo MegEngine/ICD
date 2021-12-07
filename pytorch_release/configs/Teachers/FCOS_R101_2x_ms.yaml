@@ -1,0 +1,6 @@
+_BASE_: "../Base-FCOS.yaml"
+MODEL:
+  WEIGHTS: "https://cloudstor.aarnet.edu.au/plus/s/M3UOT6JcyHy2QW1/download"
+  RESNETS:
+    DEPTH: 101
+

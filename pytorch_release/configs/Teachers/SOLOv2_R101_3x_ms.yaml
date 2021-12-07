@@ -1,0 +1,6 @@
+_BASE_: "../Base-SOLOv2.yaml"
+MODEL:
+  WEIGHTS: "https://cloudstor.aarnet.edu.au/plus/s/9w7b3sjaXvqYQEQ"
+  RESNETS:
+    DEPTH: 101
+

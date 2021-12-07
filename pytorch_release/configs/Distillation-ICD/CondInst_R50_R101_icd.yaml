@@ -1,0 +1,16 @@
+_BASE_: "../Base-CondInst.yaml"
+MODEL:
+  WEIGHTS: "detectron2://ImageNetPretrained/MSRA/R-50.pkl"
+  RESNETS:
+    DEPTH: 50
+  DISTILLER:
+    MODEL_LOAD_OFFICIAL: False
+    MODEL_DISTILLER_CONFIG: 'Teachers/CondIns_R101_3x_ms.yaml'
+
+    INS_ATT_MIMIC:
+      WEIGHT_VALUE: 8.0
+
+SOLVER:
+  STEPS: (60000, 80000)
+  MAX_ITER: 90000
+  CLIP_GRADIENTS: {"ENABLED": True}

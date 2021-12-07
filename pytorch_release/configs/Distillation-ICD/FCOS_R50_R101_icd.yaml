@@ -1,0 +1,17 @@
+_BASE_: "../Base-FCOS.yaml"
+MODEL:
+  WEIGHTS: "detectron2://ImageNetPretrained/MSRA/R-50.pkl"
+  RESNETS:
+    DEPTH: 50
+  DISTILLER:
+    MODEL_LOAD_OFFICIAL: False
+    MODEL_DISTILLER_CONFIG: 'Teachers/FCOS_R101_2x_ms.yaml'
+    # NOTE: FCOS only release a 2x model, we use another 3x model trained by ourselves to report in the paper.
+
+    INS_ATT_MIMIC:
+      WEIGHT_VALUE: 8.0
+
+SOLVER:
+  STEPS: (60000, 80000)
+  MAX_ITER: 90000
+  CLIP_GRADIENTS: {"ENABLED": True}

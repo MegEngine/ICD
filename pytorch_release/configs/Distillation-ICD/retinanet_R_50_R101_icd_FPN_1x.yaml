@@ -1,0 +1,16 @@
+_BASE_: "../Base-RetinaNet.yaml"
+MODEL:
+  WEIGHTS: "detectron2://ImageNetPretrained/MSRA/R-50.pkl"
+  RESNETS:
+    DEPTH: 50
+  DISTILLER:
+    MODEL_LOAD_OFFICIAL: True
+    MODEL_DISTILLER_CONFIG: 'COCO-Detection/retinanet_R_101_FPN_3x.yaml'
+      
+    INS_ATT_MIMIC:
+      WEIGHT_VALUE: 8.0
+
+SOLVER:
+  STEPS: (60000, 80000)
+  MAX_ITER: 90000
+  CLIP_GRADIENTS: {"ENABLED": True}
