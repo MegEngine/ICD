@@ -22,8 +22,8 @@ cd pytorch_release
 # Installation
 pip install pip --upgrade
 pip install -r requirements.txt
-pip install 'git+https://github.com/facebookresearch/detectron2.git'
-pip install 'git+https://github.com/aim-uofa/AdelaiDet.git'
+pip install https://github.com/facebookresearch/detectron2/archive/refs/tags/v0.5.tar.gz
+pip install 'git+https://github.com/aim-uofa/AdelaiDet.git@7bf9d87'
 
 # Prepare dataset according to https://github.com/facebookresearch/detectron2/tree/main/datasets
 

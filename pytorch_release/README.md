@@ -5,19 +5,21 @@ This is an official implementation of the paper "Instance-Conditional Knowledge 
 # Requirements
 The project is depending on the following libraries. You may need to install Detectron2 and AdelaiDet mannully, please refer to their github pages.
 - Python3 (recommand 3.8)
-- pytorch >= 1.9.0
-- torchvision >= 0.10.0
-- opencv-python >= 4.5.4.58
-- [Detectron2](https://github.com/facebookresearch/detectron2) >= 0.5.0
-- [AdelaiDet](https://github.com/aim-uofa/AdelaiDet) >= 7bf9d87 
+- pytorch == 1.9.0
+- torchvision == 0.10.0
+- opencv-python == 4.5.4.58
+- [Detectron2](https://github.com/facebookresearch/detectron2) == 0.5.0
+- [AdelaiDet](https://github.com/aim-uofa/AdelaiDet) == 7bf9d87 
+
+(To avoid conflict, we recommend to use the exact above versions.)
 
 Reference command for installation:
 ```
 # Switch to this directory
 pip install pip --upgrade
 pip install -r requirements.txt
-pip install 'git+https://github.com/facebookresearch/detectron2.git'
-pip install 'git+https://github.com/aim-uofa/AdelaiDet.git'
+pip install https://github.com/facebookresearch/detectron2/archive/refs/tags/v0.5.tar.gz
+pip install 'git+https://github.com/aim-uofa/AdelaiDet.git@7bf9d87'
 ```
 
 You will also need to prepare datasets according to [detectron2](https://github.com/facebookresearch/detectron2/tree/main/datasets), put your data under the following structure, and set the environment variable by `export DETECTRON2_DATASETS=/path/to/datasets`.
@@ -84,7 +86,7 @@ Run on multiple machines:
 ```
 
 ## Train and distill models
-Everything is the same as the above, except the entry ([train_distill.py](./train_distill.py)) and the config. 
+We leave everything the same as the above, except the entry ([train_distill.py](./train_distill.py)) and the config. 
 
 ### Examples:
 
@@ -107,11 +109,11 @@ python3 train_distill.py --num-gpus 8 --resume --config-file configs/Distillatio
 ```
 
 ### Write distillation configs:
-The key is how to write a config for distillation, we will show two examples:
+To introduce how to write a config for distillation, let's see two examples:
 
 **If teacher model is released by detectron2 officially:**
 
-We can load checkpoint from detectron2 model_zoo API, we will set `MODEL_LOAD_OFFICIAL=True` and use the corresponding config file. You may also set `WEIGHT_VALUE` to the desired number. 
+You can load checkpoint from detectron2 model_zoo API, set `MODEL_LOAD_OFFICIAL=True` and use the corresponding config file. You may also set `WEIGHT_VALUE` to the desired number. 
 
 ```
 MODEL:
@@ -123,12 +125,12 @@ MODEL:
       WEIGHT_VALUE: 8.0
 ```
 
-Note: we also support configs from detectron2 new baselines, like [LSJ (large scale jitters) models](https://github.com/facebookresearch/detectron2/blob/main/configs/new_baselines/mask_rcnn_R_101_FPN_400ep_LSJ.py), which could be helpful in practice.
+Note: It also support configs from detectron2 new baselines, like [LSJ (large scale jitters) models](https://github.com/facebookresearch/detectron2/blob/main/configs/new_baselines/mask_rcnn_R_101_FPN_400ep_LSJ.py), which could be helpful in practice.
 
 
-**If we use a standalone teacher:**
+**If you want to use a standalone teacher trained by yourself:**
 
-If we train a teacher by ourselves, we may need to define a standalone config for the teacher. Set `MODEL_LOAD_OFFICIAL=False` and use a standalone config file.
+If you train a teacher by ourselves, you may need to define a standalone config for the teacher. Set `MODEL_LOAD_OFFICIAL=False` and use a standalone config file.
 
 ``` 
 MODEL:
