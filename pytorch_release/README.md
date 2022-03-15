@@ -15,7 +15,7 @@ The project is depending on the following libraries. You may need to install Det
 
 Reference command for installation:
 ```
-# Switch to this directory
+# Switch to this directory (and maybe create a virtual environment)
 pip install pip --upgrade
 pip install -r requirements.txt
 pip install https://github.com/facebookresearch/detectron2/archive/refs/tags/v0.5.tar.gz

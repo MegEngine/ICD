@@ -12,14 +12,14 @@ This is the official implementation of the paper "Instance-Conditional Knowledge
 > [[arXiv](https://arxiv.org/abs/2110.12724)][[Citation](#citation)][[OpenReview](https://openreview.net/forum?id=k7aeAz4Vbb)]
 
 ## Usage 
-You can find two implementation for [MegEngine](./megengine_release/README.md) and [Pytorch](./pytorch_release/README.md) in two sub-folders. We use the latter one to report performance in the paper. Switch to the subfolder for more information.
+You can find two implementations for [MegEngine](./megengine_release/README.md) and [Pytorch](./pytorch_release/README.md) under two sub-folders. We use the latter one to report the performance in the paper. Switch to the subfolder for more information.
 
 ### Try it in a few lines :
 Take the detectron2 implementation as an example, you can train your model in a few lines:
 ```
 cd pytorch_release
 
-# Installation
+# Install dependancies
 pip install pip --upgrade
 pip install -r requirements.txt
 pip install https://github.com/facebookresearch/detectron2/archive/refs/tags/v0.5.tar.gz
@@ -27,7 +27,7 @@ pip install 'git+https://github.com/aim-uofa/AdelaiDet.git@7bf9d87'
 
 # Prepare dataset according to https://github.com/facebookresearch/detectron2/tree/main/datasets
 
-# train and distill a retinanet detector with ICD
+# Train and distill a retinanet detector with ICD
 python3 train_distill.py --num-gpus 8 --resume --config-file configs/Distillation-ICD/retinanet_R_50_R101_icd_FPN_1x.yaml OUTPUT_DIR output/icd_retinanet
 ```
 
