@@ -1,5 +1,6 @@
 #!/usr/bin/env python
-# Copyright (c) Facebook, Inc. and its affiliates.
+# Codes contributed by Zijian Kang: Copyright (c) Megvii Inc. and its affiliates. All Rights Reserved
+# Codes contributed by detectron2: Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved
 """
 Detectron2 training script with a plain training loop.
 

@@ -1,4 +1,5 @@
-# Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved
+# Codes contributed by Zijian Kang: Copyright (c) Megvii Inc. and its affiliates. All Rights Reserved
+# Codes contributed by detectron2: Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved
 from detectron2.config import CfgNode as CN
 from detectron2.utils.events import EventWriter, get_event_storage
 import numpy as np
