@@ -58,10 +58,15 @@ This repo is licensed under the Apache License, Version 2.0 (the "License").
 ## Citation
 You can use the following BibTeX entry for citation in your research.
 ```
-@inproceedings{kang2021instance,
-  title={Instance-Conditional Knowledge Distillation for Object Detection},
-  author={Kang, Zijian and Zhang, Peizhen and Zhang, Xiangyu and Sun, Jian and Zheng, Nanning},
-  booktitle={In Proc. of the Thirty-Fifth Conference on Neural Information Processing Systems (NeurIPS)},
-  year={2021}
+@inproceedings{icd_neurips2021,
+ author = {Kang, Zijian and Zhang, Peizhen and Zhang, Xiangyu and Sun, Jian and Zheng, Nanning},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {M. Ranzato and A. Beygelzimer and Y. Dauphin and P.S. Liang and J. Wortman Vaughan},
+ pages = {16468--16480},
+ publisher = {Curran Associates, Inc.},
+ title = {Instance-Conditional Knowledge Distillation for Object Detection},
+ url = {https://proceedings.neurips.cc/paper/2021/file/892c91e0a653ba19df81a90f89d99bcd-Paper.pdf},
+ volume = {34},
+ year = {2021}
 }
 ```
